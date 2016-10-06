@@ -1,25 +1,22 @@
-<ion-view title="Signup" hide-nav-bar="true" id="page6" style="background-color:#1E2744;">
-    <ion-content padding="true" class="manual-ios-statusbar-padding">
+<ion-view title="Signup" id="page6" style="background-color:#1E2744;">
+    <ion-content padding="true" class="has-header">
         <form id="signup-form2" class="list">
-            <div>
+            <div class="flow-logo">
                 <img src="img/sDxcOfaSRyKmVOxWXs59_flowTicket.svg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
             </div>
             <h2 id="signup-heading2" style="color:#FCFCFC;text-align:center;">Cadastre-se</h2>
         </form>
         <ion-list id="signup-list3">
-            <label class="item item-input" id="signup-input3">
-                <span class="input-label">Nome</span>
-                <input type="text" placeholder="">
+            <label class="item item-input user-input" id="signup-input3">
+                <input type="text" placeholder="Nome">
             </label>
-            <label class="item item-input" id="signup-input4">
-                <span class="input-label">Usuário</span>
-                <input type="text" placeholder="">
+            <label class="item item-input user-input" id="signup-input4">
+                <input type="text" placeholder="Usuário">
             </label>
-            <label class="item item-input" id="signup-input5">
-                <span class="input-label">Senha</span>
-                <input type="password" placeholder="">
+            <label class="item item-input user-input" id="signup-input5">
+                <input type="password" placeholder="Senha">
             </label>
         </ion-list>
-        <button id="signup-button3" class="button button-stable  button-block">Enviar</button>
+        <a ui-sref="login" id="signup-button3" class="button button-calm  button-block button-clear icon ion-android-arrow-forward btn-circle"></a>
     </ion-content>
 </ion-view>

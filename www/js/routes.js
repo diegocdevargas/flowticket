@@ -10,39 +10,39 @@ angular.module('app.routes', [])
     
   
 
-      .state('tabsController.cameraTabDefaultPage', {
-    url: '/page2',
+      .state('feed.now', {
+    url: '/now',
     views: {
       'tab1': {
-        templateUrl: 'templates/cameraTabDefaultPage.html',
-        controller: 'cameraTabDefaultPageCtrl'
+        templateUrl: 'templates/now.html',
+        controller: 'nowCtrl'
       }
     }
   })
 
-  .state('tabsController.cartTabDefaultPage', {
-    url: '/page3',
+  .state('feed.avaliablePlaces', {
+    url: '/avaliable',
     views: {
       'tab2': {
-        templateUrl: 'templates/cartTabDefaultPage.html',
-        controller: 'cartTabDefaultPageCtrl'
+        templateUrl: 'templates/avaliablePlaces.html',
+        controller: 'avaliablePlacesCtrl'
       }
     }
   })
 
-  .state('tabsController.cloudTabDefaultPage', {
+  .state('feed.currentPlaces', {
     url: '/page4',
     views: {
       'tab3': {
-        templateUrl: 'templates/cloudTabDefaultPage.html',
-        controller: 'cloudTabDefaultPageCtrl'
+        templateUrl: 'templates/currentPlaces.html',
+        controller: 'currentPlacesCtrl'
       }
     }
   })
 
-  .state('tabsController', {
-    url: '/page1',
-    templateUrl: 'templates/tabsController.html',
+  .state('feed', {
+    url: '/feed',
+    templateUrl: 'templates/feed.html',
     abstract:true
   })
 
@@ -56,6 +56,54 @@ angular.module('app.routes', [])
     url: '/signup',
     templateUrl: 'templates/signup.html',
     controller: 'signupCtrl'
+  })
+
+  .state('main', {
+    url: '/main',
+    templateUrl: 'templates/main.html',
+    controller: 'mainCtrl'
+  })
+
+  .state('recovery', {
+    url: '/recovery',
+    templateUrl: 'templates/recovery.html',
+    controller: 'recoveryCtrl'
+  })
+
+  .state('map', {
+    url: '/map',
+    templateUrl: 'templates/map.html',
+    controller: 'mapCtrl'
+  })
+
+  .state('calendary', {
+    url: '/calendary',
+    templateUrl: 'templates/calendary.html',
+    controller: 'calendaryCtrl'
+  })
+
+  .state('hotPlaces', {
+    url: '/hot-places',
+    templateUrl: 'templates/hotPlaces.html',
+    controller: 'hotPlacesCtrl'
+  })
+
+  .state('story', {
+    url: '/story',
+    templateUrl: 'templates/story.html',
+    controller: 'storyCtrl'
+  })
+
+  .state('work', {
+    url: '/work',
+    templateUrl: 'templates/work.html',
+    controller: 'workCtrl'
+  })
+
+  .state('logOut', {
+    url: '/logout',
+    templateUrl: 'templates/logOut.html',
+    controller: 'logOutCtrl'
   })
 
 $urlRouterProvider.otherwise('/login')

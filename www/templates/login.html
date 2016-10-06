@@ -1,25 +1,23 @@
-<ion-view title="Login" hide-nav-bar="true" id="page5" style="background-color:#1E2744;">
+<ion-view title="Login" hide-nav-bar="true" hide-back-button="true" id="page5" style="background-color:#1E2744;">
     <ion-content padding="true" class="manual-ios-statusbar-padding">
         <div>
-            <img src="img/EVC9tEkSoW5KgzD8RyTr_flowTicket.svg" width="45%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            <img src="img/EVC9tEkSoW5KgzD8RyTr_flowTicket.svg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
         </div>
         <h2 id="login-heading1" style="color:#FFFFFF;text-align:center;">Login</h2>
-        <div class="spacer" style="width: 300px; height: 41px;"></div>
         <form id="login-form1" class="list">
+            <div class="spacer" style="width: 300px; height: 41px;"></div>
             <ion-list id="login-list2">
-                <label class="item item-input" id="login-input1">
-                    <span class="input-label">Usuário</span>
-                    <input type="text" placeholder="">
+                <label class="item item-input user-input" id="login-input1">
+                    <input type="text" placeholder="Usuário">
                 </label>
-                <label class="item item-input" id="login-input2">
-                    <span class="input-label">Senha</span>
-                    <input type="password" placeholder="">
+                <label class="item item-input user-input" id="login-input2">
+                    <input type="password" placeholder="Senha">
                 </label>
             </ion-list>
             <div class="spacer" style="width: 300px; height: 38px;"></div>
-            <button id="login-button1" class="button button-stable  button-block">Logar</button>
-            <a href="#" onclick="window.open('/signup', '_system', 'location=yes'); return false;" id="login-button2" style="color:#F8F9FF;font-size:12px;" class="button button-dark button-small button-block button-clear">Crie uma conta</a>
-            <a href="#" onclick="window.open('/recovery', '_system', 'location=yes'); return false;" id="login-button5" style="color:#646E9F;font-size:12px;border-radius:24px 24px 24px 24px;" class="button button-positive button-small button-block button-clear">Esqueceu a senha</a>
+            <a ui-sref="main" id="login-button1" style="color:##41C4DB;border-radius:50px 50px 50px 50px;" class="button button-calm button-large button-block button-clear icon ion-android-arrow-forward btn-circle"></a>
+            <a ui-sref="signup" id="login-button2" style="color:#F8F9FF;font-size:12px;" class="button button-dark button-small button-block button-clear">Crie uma conta</a>
+            <a ui-sref="recovery" id="login-button5" style="color:#646E9F;font-size:12px;border-radius:24px 24px 24px 24px;" class="button button-positive button-small button-block button-clear">Esqueceu a senha</a>
         </form>
     </ion-content>
 </ion-view>

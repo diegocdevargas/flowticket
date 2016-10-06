@@ -1,0 +1,25 @@
+$calm: #42C3DB;
+$dark: #1E2744;
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+@import "../www/lib/ionic/scss";
+.user-input {
+	border: 2px solid #41C4DB;
+	background: none;
+	color: white;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.btn-circle {
+	text-align: center;
+	border: 2px solid #41C4DB;
+}
+
+.flow-logo {
+	display: block;
+}
+
+ion-view,.pane,.view {
+	background-color: #222A49;
+}
+
