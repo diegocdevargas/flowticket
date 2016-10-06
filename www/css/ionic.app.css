@@ -9730,4 +9730,5 @@ a.button {
   display: block; }
 
 ion-view, .pane, .view {
-  background-color: #222A49; }
+  background-color: #222A49; 
+  background: url(../img/flow_bg.jpg) 100%;}
