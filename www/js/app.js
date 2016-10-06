@@ -20,4 +20,25 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       StatusBar.styleDefault();
     }
   });
+
+  //Ribbons animation loop
+  //   var ribbon = document.getElementById("flow-ticket");
+
+  // var xCenter = 20;
+  // var yCenter = 20; 
+  // var poolRadius = 50;
+
+  //   var tl2 = new TimelineMax({onComplete: reverse, repeat:-1, yoyo:true});
+  //   function tweenRibbon() {
+  //     var angle = Math.random() * Math.PI * 2; //random angle in radians
+  //     var radius = Math.random() * poolRadius;
+  //     tl2.to(ribbon, 13, {scale:1.1, skewY:Math.cos(angle) + 1, skewX:8, rotation:1, rotationY: 15, rotationX: 15, x:Math.cos(angle) * radius + xCenter, y:Math.sin(angle) * radius + yCenter, ease:Quad.easeInOut, onComplete:tweenRibbon, delay: 0.0000001});
+  //     tl2.to(ribbon, 13, {scale: 1, skewY:0, skewX:0, rotation:0, rotationY: 0, rotationX: 0, x:Math.cos(angle) * radius + xCenter, y:Math.sin(angle) * radius + yCenter, ease:Quad.easeInOut, onComplete:tweenRibbon, delay: 0.0000001});
+  // }
+  // tweenRibbon();
+
+
+  //   function reverse(){
+  //     tl1.reverse();
+  //   }
 })
