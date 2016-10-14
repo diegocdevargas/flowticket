@@ -19,8 +19,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.directives
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    
   });
-
+  
+  
   //Ribbons animation loop
   //   var ribbon = document.getElementById("flow-ticket");
 

@@ -50,7 +50,9 @@ angular.module('app.routes', [])
     url: '/login',
     templateUrl: 'templates/login.html',
     controller: 'loginCtrl'
+
   })
+
 
   .state('signup', {
     url: '/signup',
@@ -106,7 +108,7 @@ angular.module('app.routes', [])
     controller: 'logOutCtrl'
   })
 
-$urlRouterProvider.otherwise('/login')
+$urlRouterProvider.otherwise('/login');
 
   
 

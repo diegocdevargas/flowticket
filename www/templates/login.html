@@ -9,14 +9,14 @@
             <div class="spacer" style="width: 300px; height: 41px;"></div>
             <ion-list id="login-list2">
                 <label class="item item-input user-input" id="login-input1">
-                    <input type="text" placeholder="Usuário">
+                    <input type="text" placeholder="Usuário" ng-model="data.username">
                 </label>
                 <label class="item item-input user-input" id="login-input2">
-                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Senha" ng-model="data.password">
                 </label>
             </ion-list>
             <div class="spacer" style="width: 300px; height: 38px;"></div>
-            <a ui-sref="main" id="login-button1" style="color:##41C4DB;border-radius:50px 50px 50px 50px;" class="button button-calm button-large button-block button-clear icon ion-android-arrow-forward btn-circle"></a>
+            <a id="login-button1" ng-click="login()" style="color:##41C4DB;border-radius:50px 50px 50px 50px;" class="button button-calm button-large button-block button-clear icon ion-android-arrow-forward btn-circle"></a>
             <a ui-sref="signup" id="login-button2" style="color:#F8F9FF;font-size:12px;" class="button button-dark button-small button-block button-clear">Crie uma conta</a>
             <a ui-sref="recovery" id="login-button5" style="color:#646E9F;font-size:12px;border-radius:24px 24px 24px 24px;" class="button button-positive button-small button-block button-clear">Esqueceu a senha</a>
         </form>
