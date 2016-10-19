@@ -1,16 +1,27 @@
-angular.module('app.routes', [])
+angular.module('flowTicket.routes', [])
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function (BackandProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
-  $stateProvider
-    
-  
+   // change here to your appName
+  var appName = 'flowticket';
 
-      .state('feed.now', {
+  // token is for anonymous login. see http://docs.backand.com/en/latest/apidocs/security/index.html#anonymous-access
+  var token = 'ea4f1806-6b43-459a-8821-b5ead56097c2';
+
+  var signUpToken = 'b89dbd1c-da16-46ac-9452-70399d247d2d';
+
+  
+  BackandProvider.setAppName(appName);
+  BackandProvider.setAnonymousToken(token);
+  BackandProvider.setSignUpToken(signUpToken);
+
+  $stateProvider
+
+  .state('feed.now', {
     url: '/now',
     views: {
       'tab1': {
@@ -49,7 +60,7 @@ angular.module('app.routes', [])
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
-    controller: 'loginCtrl'
+    controller: 'loginCtrl as login'
 
   })
 
@@ -57,13 +68,13 @@ angular.module('app.routes', [])
   .state('signup', {
     url: '/signup',
     templateUrl: 'templates/signup.html',
-    controller: 'signupCtrl'
+    controller: 'signupCtrl as vm'
   })
 
   .state('main', {
     url: '/main',
     templateUrl: 'templates/main.html',
-    controller: 'mainCtrl'
+    controller: 'mainCtrl as vm'
   })
 
   .state('recovery', {
@@ -109,7 +120,51 @@ angular.module('app.routes', [])
   })
 
 $urlRouterProvider.otherwise('/login');
+$httpProvider.interceptors.push('APIInterceptor');
 
   
 
-});
+})
+
+
+// .config(function (BackandProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
+
+//         // change here to your appName
+//         var appName = 'flowTicket';
+
+//         // token is for anonymous login. see http://docs.backand.com/en/latest/apidocs/security/index.html#anonymous-access
+//         var token = 'ea4f1806-6b43-459a-8821-b5ead56097c2';
+
+//         BackandProvider.setAppName(appName);
+//         BackandProvider.setAnonymousToken(token);
+
+//         $stateProvider
+//             // setup an abstract state for the tabs directive
+//             .state('tab', {
+//                 url: '/tabs',
+//                 abstract: true,
+//                 templateUrl: 'templates/tabs.html'
+//             })
+//             .state('tab.dashboard', {
+//                 url: '/dashboard',
+//                 views: {
+//                     'tab-dashboard': {
+//                         templateUrl: 'templates/tab-dashboard.html',
+//                         controller: 'DashboardCtrl as vm'
+//                     }
+//                 }
+//             })
+//             .state('tab.login', {
+//                 url: '/login',
+//                 views: {
+//                     'tab-login': {
+//                         templateUrl: 'templates/tab-login.html',
+//                         controller: 'LoginCtrl as login'
+//                     }
+//                 }
+//             });
+
+//         $urlRouterProvider.otherwise('/tabs/dashboard');
+
+//         $httpProvider.interceptors.push('APIInterceptor');
+//     })

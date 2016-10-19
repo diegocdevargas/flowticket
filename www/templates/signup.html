@@ -5,18 +5,35 @@
                 <img src="img/sDxcOfaSRyKmVOxWXs59_flowTicket.svg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
             </div>
             <h2 id="signup-heading2" style="color:#FCFCFC;text-align:center;">Cadastre-se</h2>
-        </form>
-        <ion-list id="signup-list3">
-            <label class="item item-input user-input" id="signup-input3">
-                <input type="text" placeholder="Nome">
-            </label>
-            <label class="item item-input user-input" id="signup-input4">
-                <input type="text" placeholder="Usuário">
-            </label>
-            <label class="item item-input user-input" id="signup-input5">
-                <input type="password" placeholder="Senha">
-            </label>
-        </ion-list>
-        <a ui-sref="login" id="signup-button3" class="button button-calm  button-block button-clear icon ion-android-arrow-forward btn-circle"></a>
+       
+            <ion-list id="signup-list3">
+                <label class="item item-input user-input" id="signup-input3">
+                   <input id="email" name="email" type="email" placeholder="Your email"
+                       ng-model="vm.email">
+                </label>
+                <label class="item item-input user-input" id="signup-input4">
+                     <input id="firstname" name="firstname" type="text" placeholder="Your first name"
+                       ng-model="vm.firstName">
+                </label>
+                <label class="item item-input user-input" id="signup-input5">
+                     <input id="username" name="lastname" type="text" placeholder="Your last name"
+                       ng-model="vm.lastName">
+                </label>
+                <label class="item item-input user-input" id="signup-input5">
+                     <input id="password" name="password" type="password" placeholder="Your password"
+                       ng-model="vm.password">
+                </label>
+                <label class="item item-input user-input" id="signup-input5">
+                    <input id="again" name="again" type="password" placeholder="confirm your password"
+                       ng-model="vm.again">
+                </label>
+                <h4 style="color:red;" ng-bind="vm.errorMessage"></h4>
+            </ion-list>
+            <button id="signup-button3" type="submit" class="button button-calm  button-block button-clear icon ion-android-arrow-forward btn-circle" ng-click="vm.signup()"></button>
+            <ion-item nav-clear menu-close class="dark-bg light item-icon-left" ng-click="vm.signupFacebook()">
+                <i class="icon ion-social-facebook"></i>
+                Signup with Facebook
+            </ion-item>
+         </form>
     </ion-content>
 </ion-view>
