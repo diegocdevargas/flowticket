@@ -13,6 +13,32 @@ function ($scope, $stateParams) {
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams) {
 
+    var map = L.map('flow-map').fitWorld();
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v10/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWV0YWx4aXgiLCJhIjoiY2l1c21pamtlMDBhczJvcnYzZDI3M2xmZiJ9.5Q6VLQB9TQPkY8e8cPravQ', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18
+    }).addTo(map);
+
+    map.locate({setView: true, maxZoom: 16});
+
+    function onLocationFound(e) {
+        var radius = e.accuracy / 2;
+
+        L.marker(e.latlng).addTo(map)
+            .bindPopup("Você está há " + radius + " metros deste ponto").openPopup();
+
+        L.circle(e.latlng, radius).addTo(map);
+    }
+
+    map.on('locationfound', onLocationFound);
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationerror', onLocationError);
+   
 
 }])
    
@@ -290,6 +316,8 @@ function ($scope, $stateParams) {
 
   initCreateForm();
   getAll();
+
+  
 
 })
    

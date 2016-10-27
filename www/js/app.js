@@ -57,7 +57,7 @@ angular.module('flowTicket', ['ionic', 'backand', 'flowTicket.controllers', 'flo
   })  
 
 
-
+  
   
   //Ribbons animation loop
   //   var ribbon = document.getElementById("flow-ticket");

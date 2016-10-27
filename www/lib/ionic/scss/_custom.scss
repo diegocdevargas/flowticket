@@ -1,0 +1,69 @@
+ion-view, .pane, .view {
+  background-color: #222A49; 
+  background: url(../img/flow_bg.jpg) 100%;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.social-wrapper{
+	text-align: center;
+	.login-fb-btn .icon{
+		color: #41C4DB;
+		font-size: 35px;
+	}
+	.login-fb-btn{
+		text-align: center;
+		background: none;
+
+		display: inline-block;
+	}
+}
+
+html{
+	.user-input{
+		background-color: transparent;
+		border: 2px solid $calm;
+		input{
+			color: white;
+		}
+	}
+}
+
+#side-menu21{
+	background-color: $theme; 
+}
+
+#flow-map {
+    height: 100vh;
+    width: 100vw;
+}
+
+html .tabs-stable > .tabs{
+	background-color: $theme;
+	border-color: rgba(65,196,219,0.50);
+	height: 60px;
+    padding-top: 5px;
+}
+
+
+.tabs-stable{
+	.tab-nav{
+		.icon{
+			color: $calm;
+		}
+		span{
+			color: white;
+		}
+	}
+}
+
+#particles-js{
+	height: 100vh;
+    width: 100vw;
+    z-index: 9;
+    position: absolute;
+    //display: none;
+    background: cover;
+}

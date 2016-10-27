@@ -1,0 +1,204 @@
+svg{
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+svg{
+  .first-path{
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 5;
+    stroke-dasharray: 2850;
+    stroke-dashoffset: 2850;
+    animation: draw 2s 0s forwards linear;
+  }
+  .second-path {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 4;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 0.5s forwards ease-in-out;
+  }
+  .third-path {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 4;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 0.6s forwards linear;
+  }
+  .fourth-path {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 4;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 0.7s forwards linear;
+  }
+  .fifith-path {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 4;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 0.8s forwards linear;
+  }
+  .first-dot {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2.5;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 1s 1s forwards linear;
+  }  
+  .second-dot {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2.5;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 1s 1.2s forwards linear;
+  }  
+  .third-dot {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2.5;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 1s 1.3s forwards linear;
+  } 
+  .fourth-dot {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2.5;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 1s 1.4s forwards linear;
+  }    
+  .fifth-dot {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2.5;
+    stroke-dasharray: 50;
+    stroke-dashoffset: 50;
+    animation: draw 1s 1.5s forwards linear;
+  }   
+  .first-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2s forwards linear;
+  }
+.second-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.1s forwards linear;
+  }
+  .third-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.2s forwards linear;
+  }
+  .fourth-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.3s forwards linear;
+  }  
+  .fifth-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.4s forwards linear;
+  }
+  .sixth-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.5s forwards linear;
+  }
+  .seventh-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.6s forwards linear;
+  }
+  .eight-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.7s forwards linear;
+  }
+  .nineth-dash {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 6;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 2.8s forwards linear;
+  }  
+  .first-cloud {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 3.1s forwards linear;
+  } 
+  .second-cloud {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 3.3s forwards linear;
+  }  
+  .third-cloud {
+    fill-opacity: 0;
+    stroke: #41C4DB;
+    stroke-width: 2;
+    stroke-dasharray: 1050;
+    stroke-dashoffset: 1050;
+    animation: draw 5s 3.5s forwards linear;
+  }  
+}
+ 
+.list{
+    text-align: center;
+}
+
+.list .item-input{
+    width: 70%;
+    display: inline-block;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+
+  }
+}
