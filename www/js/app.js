@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('flowTicket', ['ionic', 'backand', 'flowTicket.controllers', 'flowTicket.routes', 'flowTicket.directives','flowTicket.services',])
+angular.module('flowTicket', ['ionic', 'ngAnimate','backand', 'flowTicket.controllers', 'flowTicket.routes', 'flowTicket.directives','flowTicket.services',])
 
   .run(function($ionicPlatform, Backand) {
     
@@ -53,7 +53,9 @@ angular.module('flowTicket', ['ionic', 'backand', 'flowTicket.controllers', 'flo
         unauthorized();
       }
     });
-  
+
+    $rootScope.showme = true;
+
   })  
 
 

@@ -1,10 +1,18 @@
 ion-view, .pane, .view {
   background-color: #222A49; 
-  background: url(../img/flow_bg.jpg) 100%;
+  //background: url(../img/flow_bg.jpg) 100%;
 }
 
 .text-center{
 	text-align: center;
+}
+
+.inherit{
+	position: inherit;
+}
+
+.inherit-overflow{
+	overflow: initial!important;
 }
 
 .social-wrapper{

@@ -25,6 +25,12 @@
     -->
 
     <link href="css/ionic.app.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/vicons/vicons-font.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
@@ -50,10 +56,11 @@
     -->
 
   </head>
-  <div id="particles-js"></div>
   <body ng-app="flowTicket" animation="slide-left-right-ios7">
   <!-- particles.js container -->
-    <div>
+    <a class="hide-click fade" href="javascript:void(0);" title="" ng-click="showme=false" ng-show="showme"></a>
+    <div id="particles-js" class="fade" ng-show="showme"></div>
+    <div> 
       <ion-side-menus enable-menu-with-back-views="true" data-componentid="side-menu21">
           <ion-side-menu-content>
               <ion-nav-bar class="bar-dark">
@@ -96,4 +103,7 @@
   <!-- Particles -->
   <script src="lib/ionic/js/particles.min.js"></script>
   <script src="lib/ionic/js/app.js"></script>
+  <script src="lib/ionic/js/jquery.min.js"></script>
+  <script src="lib/ionic/js/TweenMax.min.js"></script>
+  <script src="lib/ionic/js/menu.js"></script>
 </html>
