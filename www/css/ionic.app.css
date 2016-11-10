@@ -9998,6 +9998,9 @@ ion-view, .pane, .view {
 .inherit-overflow {
   overflow: initial !important; }
 
+.inherit-height {
+  height: auto !important; }
+
 .social-wrapper {
   text-align: center; }
   .social-wrapper .login-fb-btn .icon {

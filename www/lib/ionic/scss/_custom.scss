@@ -15,6 +15,11 @@ ion-view, .pane, .view {
 	overflow: initial!important;
 }
 
+.inherit-height{
+	height: auto!important;
+}
+
+
 .social-wrapper{
 	text-align: center;
 	.login-fb-btn .icon{
@@ -75,3 +80,4 @@ html .tabs-stable > .tabs{
     //display: none;
     background: cover;
 }
+
