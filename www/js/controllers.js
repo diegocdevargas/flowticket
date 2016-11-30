@@ -58,7 +58,7 @@ function ($scope, $stateParams) {
 
 }])
 
-.controller('loginCtrl', function (Backand, $state, $scope, $rootScope, $ionicPopup, LoginService) {
+.controller('loginCtrl', function (Backand, $state, $scope, $rootScope, $ionicPopup, $ionicSideMenuDelegate, LoginService) {
   var login = this;
   login.facebookToken = '';
 
@@ -124,6 +124,7 @@ function ($scope, $stateParams) {
         login.role = userRole;
       }, loginError)
     }
+    onLogin();
   }
 
   function anonymousLogin() {
@@ -149,6 +150,8 @@ function ($scope, $stateParams) {
   login.signin = signin;
   login.signout = signout;
   login.anonymousLogin = anonymousLogin;
+
+  $ionicSideMenuDelegate.canDragContent(false);
 
 })
    
