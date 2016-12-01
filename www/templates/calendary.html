@@ -1,22 +1,21 @@
 <ion-view title="Calendary" id="page10">
     <ion-content padding="true" class="has-header">
-        <form id="calendary-form5" class="list">
-            <ion-item class="item-icon-left" id="calendary-list-item7">
-                <i class="icon ion-wineglass"></i>Item</ion-item>
-            <label class="item item-input">
-                <i class="icon ion-search placeholder-icon"></i>
-                <input type="search" placeholder="">
-            </label>
-            <label class="item item-select" id="calendary-select1">
-                <span class="input-label">Select</span>
-                <select></select>
-            </label>
-            <ion-radio id="calendary-radio1">Radio</ion-radio>
-            <label class="item item-input" id="calendary-input6">
-                <span class="input-label">Input</span>
-                <input type="text" placeholder="">
-            </label>
-            <ion-checkbox>Checkbox</ion-checkbox>
-        </form>
+        <!-- <div class="container">  -->
+            <div class="custom-calendar-wrap custom-calendar-full">
+                <div class="custom-header clearfix">
+                    <h2>You can check the schedule here</a></span></h2>
+                    <h3 class="custom-month-year">
+                        <span id="custom-month" class="custom-month"></span>
+                        <span id="custom-year" class="custom-year"></span>
+                        <nav>
+                            <span id="custom-prev" class="custom-prev"></span>
+                            <span id="custom-next" class="custom-next"></span>
+                            <span id="custom-current" class="custom-current" title="Got to current date"></span>
+                        </nav>
+                    </h3>
+                </div>
+                <div id="calendar" class="fc-calendar-container"></div>
+            </div>
+        <!--</div> /container -->
     </ion-content>
 </ion-view>

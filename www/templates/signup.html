@@ -2,9 +2,9 @@
     <ion-content padding="true" class="has-header">
         <form id="signup-form2" class="list">
             <div class="flow-logo">
-                <img src="img/sDxcOfaSRyKmVOxWXs59_flowTicket.svg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+                <ng-include src="'img/flow_ticket.svg'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; height: auto" ></ng-include>
             </div>
-            <h2 id="signup-heading2" style="color:#FCFCFC;text-align:center;">Cadastre-se</h2>
+            <h2 id="signup-heading2" style="color:#FCFCFC;text-align:center;">Come on, just a step closer!</h2>
        
             <ion-list id="signup-list3">
                 <label class="item item-input user-input" id="signup-input3">
@@ -30,10 +30,10 @@
                 <h4 style="color:red;" ng-bind="vm.errorMessage"></h4>
             </ion-list>
             <button id="signup-button3" type="submit" class="button button-calm  button-block button-clear icon ion-android-arrow-forward btn-circle" ng-click="vm.signup()"></button>
-            <ion-item nav-clear menu-close class="dark-bg light item-icon-left" ng-click="vm.signupFacebook()">
+       <!--      <ion-item nav-clear menu-close class="dark-bg light item-icon-left" ng-click="vm.signupFacebook()">
                 <i class="icon ion-social-facebook"></i>
                 Signup with Facebook
-            </ion-item>
+            </ion-item> -->
          </form>
     </ion-content>
 </ion-view>

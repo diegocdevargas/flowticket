@@ -1,11 +1,10 @@
 <ion-view title="Login" hide-nav-bar="true" hide-back-button="true" id="page5">
-
     <ion-content padding="true" class="manual-ios-statusbar-padding">
         <div>
             <ng-include src="'img/flow_ticket.svg'" style="display: block; margin-left: auto; margin-right: auto; width: 50%; height: auto" ></ng-include>
             <!-- <img src="img/EVC9tEkSoW5KgzD8RyTr_flowTicket.svg" width="50%" height="auto" style="display: block; margin-left: auto; margin-right: auto;"> -->
         </div>
-        <h2 id="login-heading1" style="color:#FFFFFF;text-align:center;">Login</h2>
+        <h2 id="login-heading1">Login</h2>
         <form id="login-form1" class="list" ng-submit="login.signin()">
             <div class="spacer" style="width: 80px; height: 30px;"></div>
             <ion-list id="login-list2">
@@ -17,30 +16,17 @@
                 </label>
             </ion-list>
             <div class="spacer" style="width: 80px; height: 10px;"></div>
-            <button id="login-button1" type="submit" style="color:#41C4DB;border-radius:50px 50px 50px 50px;" class="button button-calm button-large button-block button-clear icon ion-android-arrow-forward btn-circle"></button>
-
+            <button id="login-button1" type="submit" style="color:#41C4DB;border-radius:50px 50px 50px 50px;margin-top: 0;margin-bottom: 0;" class="button button-calm button-large button-block button-clear icon ion-android-arrow-forward btn-circle"></button>
+            <div class="social-wrapper padding">
+                <ion-item nav-clear menu-close class="login-fb-btn" ng-click="login.facebookTokenSingin()" style="border:none">
+                    <i class="icon ion-social-facebook"></i>
+                </ion-item>
+                <ion-item nav-clear menu-close class="login-fb-btn" ng-click="login.anonymousLogin()" style="border:none">
+                    <i class="icon ion-ios-play-outline"></i>
+                </ion-item>
+            </div>
             <a ui-sref="signup" id="login-button2" style="color:#F8F9FF;font-size:12px;" class="button button-dark button-small button-block button-clear">Crie uma conta</a>
             <a ui-sref="recovery" id="login-button5" style="color:#646E9F;font-size:12px;border-radius:24px 24px 24px 24px;" class="button button-positive button-small button-block button-clear">Esqueceu a senha</a>
         </form>
-        <div class="social-wrapper padding">
-            <ion-item nav-clear menu-close class="login-fb-btn" ng-click="login.facebookTokenSingin()">
-                <i class="icon ion-social-facebook"></i>
-            </ion-item>
-            <ion-item nav-clear menu-close class="login-fb-btn" ng-click="login.anonymousLogin()">
-                <i class="icon ion-ios-play-outline"></i>
-            </ion-item>
-        
-          </div>
-          <div class="card" ng-if="login.isLoggedWihtBackand">
-            <div class="item item-divider">
-              {{login.facebookToken}}
-            </div>
-            <div class="item item-text-wrap">
-              <b>Username:</b> {{login.username}}
-              <p><b>Role:</b> {{login.role}}</p>
-            </div>
-            <div class="item item-divider">
-            </div>
-          </div>
     </ion-content>
 </ion-view>

@@ -2,9 +2,12 @@
 <html>
   <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8"><!-- 
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>flowTicket APP</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&amp;subset=devanagari,latin-ext" rel="stylesheet">
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -24,12 +27,20 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
     <link href="css/ionic.app.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="fonts/vicons/vicons-font.css" />
-    
+    <!-- <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/page-scale.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/calendar.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom_1.css" />
+    <script src="lib/ionic/js/modernizr.custom.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <script src="js/app.js"></script>
@@ -42,8 +53,9 @@
     <script src="js/services.js"></script>
     
     <!-- Leaflet-->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+
+    
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 
 <!--     <script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
@@ -61,7 +73,7 @@
     <a class="hide-click fade" href="javascript:void(0);" title="" ng-click="showme=false" ng-show="showme"></a>
     <div id="particles-js" class="fade" ng-show="showme"></div>
     <div> 
-      <ion-side-menus enable-menu-with-back-views="true" data-componentid="side-menu21">
+      <ion-side-menus enable-menu-with-back-views="true" data-componentid="side-menu21" style="text-align: center;">
           <ion-side-menu-content>
               <ion-nav-bar class="bar-dark">
                   <ion-nav-back-button></ion-nav-back-button>
@@ -79,22 +91,22 @@
               </ion-header-bar>
               <ion-content ng-controller="flowingCtrl" padding="false" class="side-menu-left has-header ">
                   <ion-list id="flowing-list1" data-componentid="list1">
-                      <ion-item class="item-icon-left royal" id="flowing-list-item1" ui-sref="feed.now" menu-close="" data-componentid="list-item1">
+                      <ion-item class="item-icon-left" id="flowing-list-item1" ui-sref="feed.now" menu-close="" data-componentid="list-item1">
                           <i class="icon ion-android-globe"></i>Feed</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item2" ui-sref="main" menu-close="" data-componentid="list-item2">
+                      <ion-item class="item-icon-left" id="flowing-list-item2" ui-sref="main" menu-close="" data-componentid="list-item2">
                           <i class="icon ion-ios-pulse-strong"></i>Main</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item3" ui-sref="map" menu-close="" data-componentid="list-item3">
+                      <ion-item class="item-icon-left" id="flowing-list-item3" ui-sref="map" menu-close="" data-componentid="list-item3">
                           <i class="icon ion-map"></i>Map</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item19" ui-sref="calendary" menu-close="" data-componentid="list-item19">
+                      <ion-item class="item-icon-left" id="flowing-list-item19" ui-sref="calendary" menu-close="" data-componentid="list-item19">
                           <i class="icon ion-android-favorite-outline"></i>Calendary</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item4" ui-sref="hotPlaces" menu-close="" data-componentid="list-item4">
-                          <i class="icon ion-fireball"></i>Hot Places</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item5" ui-sref="story" menu-close="" data-componentid="list-item5">
-                          <i class="icon ion-android-bulb"></i>Story</ion-item>
-                      <ion-item class="item-icon-left royal" id="flowing-list-item6" ui-sref="work" menu-close="" data-componentid="list-item6">
-                          <i class="icon ion-beer"></i>Work</ion-item>
+                      <!-- <ion-item class="item-icon-left" id="flowing-list-item4" ui-sref="hotPlaces" menu-close="" data-componentid="list-item4">
+                          <i class="icon ion-fireball"></i>Hot Places</ion-item> -->
+                      <ion-item class="item-icon-left" id="flowing-list-item5" ui-sref="story" menu-close="" data-componentid="list-item5">
+                          <i class="icon ion-android-bulb"></i>Place</ion-item>
+                      <ion-item class="item-icon-left" id="flowing-list-item6" ui-sref="work" menu-close="" data-componentid="list-item6">
+                          <i class="icon ion-android-person"></i>Perfil</ion-item>
                   </ion-list>
-                  <a ui-sref="logOut" menu-close="" id="flowing-button7" class="button button-royal  button-block button-clear icon ion-log-out" data-componentid="button7"></a>
+                  <a ui-sref="logOut" menu-close="" id="flowing-button7" class="button button-calm  button-block button-clear icon ion-log-out" data-componentid="button7"></a>
               </ion-content>
           </ion-side-menu>
       </ion-side-menus>
@@ -105,6 +117,11 @@
   <script src="lib/ionic/js/app.js"></script>
   <script src="lib/ionic/js/jquery.min.js"></script>
   <script src="lib/ionic/js/TweenMax.min.js"></script>
-
-
+  <script src="lib/ionic/js/sample-geojson.js"></script>
+  <script src="lib/ionic/js/classie.js"></script>
+  
+  <script src="lib/ionic/js/jquery.calendario.js" type="text/javascript" ></script>
+  <script src="lib/ionic/js/data.js" type="text/javascript" ></script>
+<!--   <script src="lib/ionic/js/draggabilly.pkgd.min.js"></script>
+  <script src="lib/ionic/js/dragdrop.js"></script> -->
 </html>

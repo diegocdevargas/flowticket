@@ -48,10 +48,27 @@ html{
 	background-color: $theme; 
 }
 
-#flow-map {
+#now-map{
     height: 100vh;
     width: 100vw;
 }
+
+#avaliable-map{
+    height: 100vh;
+    width: 100vw;
+}
+
+#current-map{
+    height: 100vh;
+    width: 100vw;
+}
+
+#flow-map{
+    height: 100vh;
+    width: 100vw;
+}
+
+
 
 html .tabs-stable > .tabs{
 	background-color: $theme;
@@ -81,3 +98,62 @@ html .tabs-stable > .tabs{
     background: cover;
 }
 
+#flow-ticket{
+	width: 75%;
+	display: inherit;
+}
+
+#login-heading1{
+	color:#FFFFFF;
+	text-align:center;
+	font-family: 'Poppins', sans-serif; 
+	font-weight: 400; 
+	letter-spacing: 20px;
+	text-transform: uppercase;
+	text-indent: 15px;
+}
+
+#page7{
+	background: url(../img/flow_bg_main_small.jpg) no-repeat 100%;
+}
+
+.tabs-striped.tabs-stable .tabs{
+	background: #232c4b!important;
+}
+
+
+.product__info h3{
+	color: white!important;
+}
+
+
+.place-title{
+	color: white;
+}
+
+.menu-item-button{
+	.item-content{
+		background: none;
+		i{
+			color: white;
+		}
+	}	
+}
+
+html .user-input{
+	background-color: transparent;
+    border-bottom: 2px solid #41C4DB;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+.item-icon-left{
+	color: #212b4b;
+}
+
+.item{
+	border-width: 2px;
+	border-color: #212b4b;
+}
