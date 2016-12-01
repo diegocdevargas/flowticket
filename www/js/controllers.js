@@ -1107,7 +1107,7 @@ function ($scope, $stateParams) {
               }
 
             },
-            caldata : codropsEvents
+            caldata : awcEvents
           } ),
           $month = $( '#custom-month' ).html( cal.getMonthName() ),
           $year = $( '#custom-year' ).html( cal.getYear() );
