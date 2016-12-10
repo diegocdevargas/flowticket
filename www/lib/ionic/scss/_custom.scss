@@ -157,3 +157,11 @@ html .user-input{
 	border-width: 2px;
 	border-color: #212b4b;
 }
+
+.bar .button, .bar button{
+	padding: 0 13px;
+}
+
+.overflow-free{
+	overflow-y: scroll;
+}
