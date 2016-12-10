@@ -6727,7 +6727,6 @@ button.item.item-button-right {
  */
 .slider {
   position: relative;
-  visibility: hidden;
   overflow: hidden; }
 
 .slider-slides {
@@ -10101,6 +10100,12 @@ html .user-input {
 .item {
   border-width: 2px;
   border-color: #212b4b; }
+
+.bar .button, .bar button {
+  padding: 0 13px; }
+
+.overflow-free {
+  overflow-y: scroll; }
 
 .platform-ios .manual-ios-statusbar-padding {
   padding-top: 20px; }
