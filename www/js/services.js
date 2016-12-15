@@ -14,10 +14,10 @@ angular.module('flowTicket.services', [])
   };
 })
 
-.service('ItemsModel', function ($http, Backand) {
+.service('ProductsModel', function ($http, Backand) {
   var service = this,
     baseUrl = '/1/objects/',
-    objectName = 'items/';
+    objectName = 'products/';
 
   function getUrl() {
     return Backand.getApiUrl() + baseUrl + objectName;

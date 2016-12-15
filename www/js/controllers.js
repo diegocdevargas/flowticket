@@ -27,7 +27,7 @@ function ($scope, $stateParams) {
       redIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water.png'});
       orangeIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water2.png'});
 
-  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/story">Go</a>').addTo(map);
+  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/place">Go</a>').addTo(map);
   L.marker([-28.2626028, -52.4067191], {icon: redIcon}).bindPopup("Boka Lanches").addTo(map);
   L.marker([-28.2343797, -52.3839636], {icon: orangeIcon}).bindPopup("Associação dos Professores. (Projecto X - Artes)").addTo(map);
 
@@ -122,7 +122,7 @@ function ($scope, $stateParams) {
       redIcon = new LeafIcon({iconUrl: 'http://awc.art.br/val.png'});
       orangeIcon = new LeafIcon({iconUrl: 'http://awc.art.br/wateravaliable.png'});
 
-  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/story">Go</a>').addTo(map2);
+  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/place">Go</a>').addTo(map2);
   L.marker([-28.2626028, -52.4067191], {icon: redIcon}).bindPopup("Boka Lanches").addTo(map2);
   L.marker([-28.2343797, -52.3839636], {icon: orangeIcon}).bindPopup("Associação dos Professores. (Projecto X - Artes)").addTo(map2);
 
@@ -175,7 +175,7 @@ function ($scope, $stateParams) {
       redIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water.png'});
       orangeIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water2current.png'});
 
-  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/story">Go</a>').addTo(map3);
+  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/place">Go</a>').addTo(map3);
   L.marker([-28.2626028, -52.4067191], {icon: redIcon}).bindPopup("Boka Lanches").addTo(map3);
   L.marker([-28.2343797, -52.3839636], {icon: orangeIcon}).bindPopup("Associação dos Professores. (Projecto X - Artes)").addTo(map3);
 
@@ -373,101 +373,8 @@ function ($scope, $stateParams) {
   vm.errorMessage = '';
 })
    
-.controller('mainCtrl', function (ItemsModel, $rootScope) {
-  var vm = this;
-
-  function goToBackand() {
-    window.location = 'http://docs.backand.com';
-  }
-
-  function getAll() {
-    ItemsModel.all()
-      .then(function (result) {
-        vm.data = result.data.data;
-      });
-  }
-
-  function clearData() {
-    vm.data = null;
-  }
-
-  function create(object) {
-    ItemsModel.create(object)
-      .then(function (result) {
-        cancelCreate();
-        getAll();
-      });
-  }
-
-  function update(object) {
-    ItemsModel.update(object.id, object)
-      .then(function (result) {
-        cancelEditing();
-        getAll();
-      });
-  }
-
-  function deleteObject(id) {
-    ItemsModel.delete(id)
-      .then(function (result) {
-        cancelEditing();
-        getAll();
-      });
-  }
-
-  function initCreateForm() {
-    vm.newObject = {name: '', description: ''};
-  }
-
-  function setEdited(object) {
-    vm.edited = angular.copy(object);
-    vm.isEditing = true;
-  }
-
-  function isCurrent(id) {
-    return vm.edited !== null && vm.edited.id === id;
-  }
-
-  function cancelEditing() {
-    vm.edited = null;
-    vm.isEditing = false;
-  }
-
-  function cancelCreate() {
-    initCreateForm();
-    vm.isCreating = false;
-  }
-
-  vm.objects = [];
-  vm.edited = null;
-  vm.isEditing = false;
-  vm.isCreating = false;
-  vm.getAll = getAll;
-  vm.create = create;
-  vm.update = update;
-  vm.delete = deleteObject;
-  vm.setEdited = setEdited;
-  vm.isCurrent = isCurrent;
-  vm.cancelEditing = cancelEditing;
-  vm.cancelCreate = cancelCreate;
-  vm.goToBackand = goToBackand;
-  vm.isAuthorized = false;
-
-  $rootScope.$on('authorized', function () {
-    vm.isAuthorized = true;
-    getAll();
-  });
-
-  $rootScope.$on('logout', function () {
-    clearData();
-  });
-
-  if (!vm.isAuthorized) {
-    $rootScope.$broadcast('logout');
-  }
-
-  initCreateForm();
-  getAll();
+.controller('mainCtrl', function ($rootScope) {
+  
 
 
   $(document).ready(function(){
@@ -1067,7 +974,7 @@ function ($scope, $stateParams) {
       redIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water.png'});
       orangeIcon = new LeafIcon({iconUrl: 'http://awc.art.br/water2.png'});
 
-  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/story">Go</a>').addTo(map4);
+  L.marker([-28.2643051, -52.4077101], {icon: greenIcon}).bindPopup('King Size Pub <a href="#/place">Go</a>').addTo(map4);
   L.marker([-28.2626028, -52.4067191], {icon: redIcon}).bindPopup("Boka Lanches").addTo(map4);
   L.marker([-28.2343797, -52.3839636], {icon: orangeIcon}).bindPopup("Associação dos Professores. (Projecto X - Artes)").addTo(map4);
 
@@ -1154,14 +1061,109 @@ function ($scope, $stateParams) {
 
 }])
    
-.controller('storyCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+.controller('placeCtrl', function (ProductsModel, $rootScope) {
 
-/**
- *
- */
+var product = this;
+
+  function goToBackand() {
+    window.location = 'http://docs.backand.com';
+  }
+
+  function getAll() {
+    ProductsModel.all()
+      .then(function (result) {
+        product.data = result.data.data;
+        console.log(product.data[0].brand);
+      });
+  }
+
+  function clearData() {
+    product.data = null;
+  }
+
+  function create(object) {
+    ProductsModel.create(object)
+      .then(function (result) {
+        cancelCreate();
+        getAll();
+      });
+  }
+
+  function update(object) {
+    ProductsModel.update(object.id, object)
+      .then(function (result) {
+        cancelEditing();
+        getAll();
+      });
+  }
+
+  function deleteObject(id) {
+    ProductsModel.delete(id)
+      .then(function (result) {
+        cancelEditing();
+        getAll();
+      });
+  }
+
+  function initCreateForm() {
+    product.newObject = {name: '', description: ''};
+  }
+
+  function setEdited(object) {
+    product.edited = angular.copy(object);
+    product.isEditing = true;
+  }
+
+  function isCurrent(id) {
+    return vm.edited !== null && vm.edited.id === id;
+  }
+
+  function cancelEditing() {
+    product.edited = null;
+    product.isEditing = false;
+  }
+
+  function cancelCreate() {
+    initCreateForm();
+    vm.isCreating = false;
+  }
+
+  product.objects = [];
+  product.edited = null;
+  product.isEditing = false;
+  product.isCreating = false;
+  product.getAll = getAll;
+  product.create = create;
+  product.update = update;
+  product.delete = deleteObject;
+  product.setEdited = setEdited;
+  product.isCurrent = isCurrent;
+  product.cancelEditing = cancelEditing;
+  product.cancelCreate = cancelCreate;
+  product.goToBackand = goToBackand;
+  product.isAuthorized = false;
+
+  $rootScope.$on('authorized', function () {
+    product.isAuthorized = true;
+    getAll();
+  });
+
+  $rootScope.$on('logout', function () {
+    clearData();
+  });
+
+  if (!product.isAuthorized) {
+    $rootScope.$broadcast('logout');
+  }
+
+  initCreateForm();
+  getAll();
+
+  function remove(){
+    $("#checkout-item").remove();
+  }
+
+
 ;(function(window) {
 
   'use strict';
@@ -1272,7 +1274,9 @@ function ($scope, $stateParams) {
     // add to cart
     [].slice.call(grid.querySelectorAll('.grid__item')).forEach(function(item) {
       item.querySelector('.action--buy').addEventListener('click', addToCart);
+
     });
+
   }
 
   function addToCart() {
@@ -1280,6 +1284,7 @@ function ($scope, $stateParams) {
     setTimeout(function() {cartItems.innerHTML = Number(cartItems.innerHTML) + 1;}, 200);
     onEndAnimation(cartItems, function() {
       classie.remove(cart, 'cart--animate');
+      $( "<tr onclick='this.remove()' id='checkout-item'><td>" + product.data[0].name + "</span></td><td>1</td><td>$" + product.data[0].price + "</td><td><button  class='checkout__action'><i class='icon icon ion-trash-a'></i></button></td></tr>" ).appendTo( ".checkout__summary" );
     });
   }
 
@@ -1293,25 +1298,25 @@ function ($scope, $stateParams) {
 
 })(window);
 
-(function() {
-        [].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
-          var openCtrl = el.querySelector( '.checkout__button' ),
-            closeCtrls = el.querySelectorAll( '.checkout__cancel' );
+  (function() {
+    [].slice.call( document.querySelectorAll( '.checkout' ) ).forEach( function( el ) {
+      var openCtrl = el.querySelector( '.checkout__button' ),
+        closeCtrls = el.querySelectorAll( '.checkout__cancel' );
 
-          openCtrl.addEventListener( 'click', function(ev) {
-            ev.preventDefault();
-            classie.add( el, 'checkout--active' );
-          } );
+      openCtrl.addEventListener( 'click', function(ev) {
+        ev.preventDefault();
+        classie.add( el, 'checkout--active' );
+      } );
 
-          [].slice.call( closeCtrls ).forEach( function( ctrl ) {
-            ctrl.addEventListener( 'click', function() {
-              classie.remove( el, 'checkout--active' );
-            } );
-          } );
+      [].slice.call( closeCtrls ).forEach( function( ctrl ) {
+        ctrl.addEventListener( 'click', function() {
+          classie.remove( el, 'checkout--active' );
         } );
-      })();
+      } );
+    } );
+  })();
 
-}])
+})
    
 .controller('workCtrl', function (Backand, $state, $scope, $rootScope, $ionicPopup, $ionicSideMenuDelegate, LoginService) {
   var login = this;

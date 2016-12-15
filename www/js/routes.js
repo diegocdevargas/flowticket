@@ -74,7 +74,7 @@ angular.module('flowTicket.routes', [])
   .state('main', {
     url: '/main',
     templateUrl: 'templates/main.html',
-    controller: 'mainCtrl as vm'
+    controller: 'mainCtrl'
   })
 
   .state('recovery', {
@@ -101,10 +101,10 @@ angular.module('flowTicket.routes', [])
     controller: 'hotPlacesCtrl'
   })
 
-  .state('story', {
-    url: '/story',
-    templateUrl: 'templates/story.html',
-    controller: 'storyCtrl'
+  .state('place', {
+    url: '/place',
+    templateUrl: 'templates/place.html',
+    controller: 'placeCtrl as product'
   })
 
   .state('work', {
