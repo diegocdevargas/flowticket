@@ -1284,7 +1284,7 @@ var product = this;
     setTimeout(function() {cartItems.innerHTML = Number(cartItems.innerHTML) + 1;}, 200);
     onEndAnimation(cartItems, function() {
       classie.remove(cart, 'cart--animate');
-      $( "<tr onclick='this.remove()' id='checkout-item'><td>" + product.data[0].name + "</span></td><td>1</td><td>$" + product.data[0].price + "</td><td><button  class='checkout__action'><i class='icon icon ion-trash-a'></i></button></td></tr>" ).appendTo( ".checkout__summary" );
+      $( "<tr onclick='this.remove()' id='checkout-item'><td>" + product.data[1].name + "</span></td><td>1</td><td>$" + product.data[1].price + "</td><td><button  class='checkout__action'><i class='icon icon ion-trash-a'></i></button></td></tr>" ).appendTo( ".checkout__summary" );
     });
   }
 
