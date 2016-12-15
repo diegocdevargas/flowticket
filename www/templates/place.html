@@ -39,9 +39,9 @@
                             <tr><th>Item</th><th>QTY</th><th>Price</th><th>&nbsp;</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td> Ticket <span>King Size</span></td><td>1</td><td>$12.90</td><td><button class="checkout__action"><i class="icon icon ion-trash-a"></i></button></td></tr>
+<!--                             <tr onclick="this.remove()" id="checkout-item"><td> Ticket <span>King Size</span></td><td>1</td><td>$12.90</td><td><button  class="checkout__action"><i class="icon icon ion-trash-a"></i></button></td></tr>
                             <tr><td> Dummy <span>Product</span></td><td>1</td><td>$15.90</td><td><button class="checkout__action"><i class="icon icon ion-trash-a"></i></button></td></tr>
-                            <tr><td> Dummy  <span>Product</span></td><td>1</td><td>$11.90</td><td><button class="checkout__action"><i class="icon icon ion-trash-a"></i></button></td></tr>
+                            <tr><td> Dummy  <span>Product</span></td><td>1</td><td>$11.90</td><td><button class="checkout__action"><i class="icon icon ion-trash-a"></i></button></td></tr> -->
                         </tbody>
                     </table><!-- /checkout__summary -->
                     <button class="checkout__close checkout__cancel"><i class="icon icon ion-arrow-shrink"></i>Close</button>
@@ -52,17 +52,6 @@
 
     <!-- Main view -->
     <div class="view" style="overflow-y: scroll!important;">
-        <!-- Blueprint header 
-        <header class="bp-header cf">
-            <span>Blueprint <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
-            <h1>Filterable Product Grid <span>powered by <a href="http://isotope.metafizzy.co/">Isotope</a> &amp; <a href="http://flickity.metafizzy.co/">Flickity</a></span></h1>
-            <nav>
-                <a href="http://tympanus.net/Blueprints/ProductComparison/" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
-                <!--a href="" class="bp-icon bp-icon-next" data-info="next Blueprint"><span>Next Blueprint</span></a
-                <a href="http://tympanus.net/codrops/?p=24206&preview=true" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
-                <a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the archive</span></a>
-            </nav>
-        </header>-->
         <!-- Grid -->
         <section id="dummy-grid" class="content grid grid--loading dummy-grid">
             <!-- Loader -->
@@ -77,12 +66,13 @@
                     <div class="slider__item"><img src="images/2.png" alt="Dummy" /></div>
                 </div>
                 <div class="meta">
-                    <h3 class="meta__title">Dummy Product</h3>
-                    <span class="meta__brand">Dummy Brand</span>
-                    <span class="meta__price">$99</span>
+                    <h3 class="meta__title">{{product.data[0].name}}</h3>
+                    <span class="meta__brand">{{product.data[0].brand}}</span>
+                    <span class="meta__price">${{product.data[0].price}}</span>
                 </div>
-                <button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
+                <button ngclick="placeCtrl.add()" class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span class="text-hidden">Add to cart</span></button>
             </div>
+
             <div class="grid__item shoes">
                 <div class="slider">
                     <div class="slider__item"><img src="images/5.png" alt="Dummy" /></div>
@@ -542,15 +532,5 @@
             
                 <!-- <div class="checkout__count">3</div> -->
         </section>
-        <!-- /grid
-
-    </div>
-
-        <!--<div class="container">
-
-
-            </div>
-
-    <!-- /view -->
     </ion-content>
 </ion-view>
